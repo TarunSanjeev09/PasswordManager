@@ -3,18 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  width: 100%;
+  <link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+  table {
+  width: 80%;
   border-collapse: collapse;
+  align-items: center;
+  padding-left: 20px;
 }
 
 table, td, th {
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 5px;
 }
 
-th {text-align: left;}
+th {text-align: center;}
 </style>
 </head>
 <body>
@@ -26,10 +29,12 @@ th {text-align: left;}
 // if (!$con) {
 //   die('Could not connect: ' . mysqli_error($con));
 // }
-$sql = "SELECT sitenmae, username, password FROM passwords";
+$sql = "SELECT sitename, username, password FROM passwords";
 $result = mysqli_query($db,$sql);
 
-echo "string";
+// echo "<h4 href= 'http://localhost/workindia/addpasswords.php'>Want to add more passwords?</h4>"; 
+// echo "<button onclick='http://localhost/workindia/addpasswords.php'>Click Here</button>";
+// <a href="addpasswords.php">click here!</a>
 if ($result) {
     echo "<table style=";
     echo "width:80%";
@@ -42,7 +47,7 @@ if ($result) {
         // <!-- echo "<button  onclick=";
         // echo "document.getElementById('id01').style.display='block'";
         // echo  ">Register</button>"; -->
-        echo  "</td></tr>";
+      
         
             }
     echo "</table>";
@@ -52,29 +57,6 @@ if ($result) {
 
 ?>
 
-<!-- mysqli_select_db($con,"ajax_demo");
-$sql="SELECT * FROM user WHERE id = '".$q."'";
-$result = mysqli_query($con,$sql);
 
-echo "<table>
-<tr>
-<th>Firstname</th>
-<th>Lastname</th>
-<th>Age</th>
-<th>Hometown</th>
-<th>Job</th>
-</tr>";
-while($row = mysqli_fetch_array($result)) {
-  echo "<tr>";
-  echo "<td>" . $row['FirstName'] . "</td>";
-  echo "<td>" . $row['LastName'] . "</td>";
-  echo "<td>" . $row['Age'] . "</td>";
-  echo "<td>" . $row['Hometown'] . "</td>";
-  echo "<td>" . $row['Job'] . "</td>";
-  echo "</tr>";
-}
-echo "</table>";
-mysqli_close($con);
-?> -->
 </body>
 </html>
