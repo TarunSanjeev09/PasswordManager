@@ -6,6 +6,6 @@
 1. Login Reggister
 
 
-<img src=“https://github.com/TarunSanjeev09/PasswordManager/blob/master/images/passwords_table_img.JPG”>
+<img src="images/passwords_table_img.JPG" >
 
 
